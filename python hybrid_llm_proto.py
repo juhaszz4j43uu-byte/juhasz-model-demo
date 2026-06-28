@@ -1,5 +1,6 @@
 # hybrid_llm_proto.py
-import np
+import numpy as np
+
 
 
 class TokenModel:
