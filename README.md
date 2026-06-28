@@ -48,18 +48,21 @@ Additional modules will be added:
 
 ---
 
-## 🔹 Version
-
-**Initial public demonstrator — Juhász Model Demo**
 ## 🔹 References (Zenodo DOIs)
 
 This demonstrator is based on the published Juhász Model papers:
 
-- Juhász Model 1.0 — https://doi.org/10.5281/zenodo.20776920
-- Juhász Model 3.0 — https://doi.org/10.5281/zenodo.20270739
-- Juhász Model 4.1 — https://doi.org/10.5281/zenodo.20347018
-- Juhász Model 8.0 — https://doi.org/10.5281/zenodo.20674998
-- Juhász Model 9.0 — https://doi.org/10.5281/zenodo.20675094
-- Juhász Model 10.0 — https://doi.org/10.5281/zenodo.20675287
-- Juhász Model 11.0 — https://doi.org/10.5281/zenodo.20675388
-- Juhász Model 12.0 — https://doi.org/10.5281/zenodo.20675497
+- **Juhász Model 1.0** — https://doi.org/10.5281/zenodo.20776920  
+- **Juhász Model 3.0** — https://doi.org/10.5281/zenodo.20270739  
+- **Juhász Model 4.1** — https://doi.org/10.5281/zenodo.20347018  
+- **Juhász Model 8.0** — https://doi.org/10.5281/zenodo.20674998  
+- **Juhász Model 9.0** — https://doi.org/10.5281/zenodo.20675094  
+- **Juhász Model 10.0** — https://doi.org/10.5281/zenodo.20675287  
+- **Juhász Model 11.0** — https://doi.org/10.5281/zenodo.20675388  
+- **Juhász Model 12.0** — https://doi.org/10.5281/zenodo.20675497  
+
+---
+
+## 🔹 Version
+
+**Initial public demonstrator — Juhász Model Demo**
