@@ -1,9 +1,10 @@
 # Juhász Model — Hybrid Dynamics Demonstrator
 
-This repository provides a minimal, transparent demonstration of the hybrid update rule
-that forms the mechanical core of the Juhász Model. The example shows how continuous
-dynamics (**Fc = m·ω²·r**) combine with discrete packet updates (**ω → ω + impulse**)
-and phase delay to generate asymmetric, non‑recurrent state evolution.
+This repository contains a minimal, transparent demonstration of the hybrid update rule
+that forms the mechanical core of the Juhász Model. The example illustrates how
+continuous dynamics (**Fc = m·ω²·r**) combine with discrete packet updates
+(**ω → ω + impulse**) and phase delay to produce asymmetric, non‑recurrent
+state evolution.
 
 ---
 
@@ -24,11 +25,11 @@ This hybrid mechanism mirrors AGEINT’s internal logic:
 
 ## 🔹 Why This Demonstrator Matters
 
-This project serves as a computational entry point for understanding the deeper
+This project provides a computational entry point for understanding the deeper
 structure of the Juhász Model. It isolates the hybrid update rule so that the core
 behavior is easy to inspect, test, and extend.
 
-It illustrates:
+It highlights:
 
 - hybrid state updates  
 - packet‑based dynamics  
