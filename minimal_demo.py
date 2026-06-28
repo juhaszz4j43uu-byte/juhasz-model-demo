@@ -1,3 +1,6 @@
+"""
+minimal_demo.py — Juhász Model 1.0 mechanical core demonstrator
+
 This script implements a minimal hybrid update cycle for the Juhász Model 1.0:
 - mechanical core (Fc = m * omega**2 * r)
 - Planck-like energy packets (discrete impulses on omega)
