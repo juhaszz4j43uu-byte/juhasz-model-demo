@@ -1,5 +1,4 @@
 # teleodynamic_steering_demo.py
-import random
 
 
 class TeleodynamicSteeringLayer:
