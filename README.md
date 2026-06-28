@@ -1,131 +1,143 @@
-Juhász Model — Hybrid Dynamics Demonstrator
-This repository contains a minimal, transparent demonstration of the hybrid update rule
-that forms the mechanical core of the Juhász Model. The example illustrates how
-continuous dynamics (Fc = m·ω²·r) combine with discrete packet updates
-(ω → ω + impulse) and phase delay to produce asymmetric, non‑recurrent
-state evolution.
+# Juhász Model — Hybrid Dynamics and Teleodynamic Demonstrators
 
-🔹 Core Concept
-The system never returns to a previous state.
-Each cycle computes a continuous force value, then applies a discrete packet update.
-Because every update shifts the state forward, the trajectory becomes a spiral‑like
-progression toward a stable attractor.
+This repository contains several minimal, fully transparent dynamical demonstrations illustrating core mechanisms of the Juhász Model (versions 1.0–12.0). Each module isolates one aspect of the unified scale‑field and teleodynamic framework, allowing the underlying behavior to be inspected, tested, and extended.
 
-This hybrid mechanism mirrors AGEINT’s internal logic:
+The demonstrations show how asymmetric, forward‑moving, non‑recurrent state evolution naturally emerges from hybrid update rules, delayed interactions, and teleodynamic field guidance. These mechanisms mirror the AGEINT cycle:
 
-collapse → packet boundary
+collapse → substitution → guidance.
 
-substitution → ω updated by impulse
+---
 
-guidance → convergence toward an attractor
+## 🔹 1. Hybrid Update Demonstrator (Minimal Hybrid Rule)
 
-🔹 Why This Demonstrator Matters
-This project provides a computational entry point for understanding the deeper
-structure of the Juhász Model. It isolates the hybrid update rule so that the core
-behavior is easy to inspect, test, and extend.
+This module illustrates the mechanical core of the Juhász Model:  
+**continuous Fc‑dynamics combined with discrete packet updates**.
 
-It highlights:
+- Continuous force:  
+  `Fc = m · ω² · r`
+- Discrete packet update:  
+  `ω → ω + impulse`
+- Phase delay produces asymmetric, non‑recurrent evolution.
 
-hybrid state updates
+Because each packet update shifts the state forward, the trajectory becomes **spiral‑like**, converging toward a stable attractor without ever returning to a previous state.
 
-packet‑based dynamics
+This hybrid mechanism is the computational analogue of the Juhász Model’s collapse → substitution → guidance cycle.
 
-phase‑delay behavior
+### Highlights
+- Hybrid state updates  
+- Packet‑based dynamics  
+- Phase‑delay behavior  
+- Spiral attractor geometry  
+- Non‑recurrent state evolution
 
-spiral‑attractor geometry
+---
 
-non‑recurrent state evolution
+## 🔹 2. Mechanical Demonstrator (Juhász Model 1.0)
 
-This mechanical core is only an analogy for the hybrid update rule.
-The full Juhász Model (3.0–12.0) is a unified scale‑field and teleodynamic framework
-that extends far beyond the mechanical demonstrator.
+A physical simulation of the two‑disk mechanical core:
 
-🔹 Mechanical Demonstrator (physical model)
-The repository also includes a physical simulation of the Juhász Model 1.0
-mechanical core (mechanical_demo.py). This model implements the actual
-two‑disc system with:
+- Radii R1 and R2 (1:2 ratio)  
+- A sphere moving radially on R1  
+- Collision at the center with R2  
+- Impulse transfer  
+- Asymmetric forward‑shifted state evolution  
+- Spiral‑like attractor behavior
 
-R1 and R2 radii (1:2 gear ratio)
+This model shows how the same asymmetric, non‑recurrent state chain emerges in a real mechanical configuration.
 
-a ball moving radially on disc R1
+---
 
-collision at the center with disc R2
+## 🔹 3. Proton–Electron Delayed Interaction Demonstrator
 
-impulse transfer and asymmetric state evolution
+This module extends the asymmetric forward‑moving dynamics into the electromagnetic domain.  
+It simulates proton–electron interaction under:
 
-forward‑moving spiral‑like attractor behavior
+- Coulomb force  
+- Lorentz magnetic force  
+- Small gravitational attraction  
+- **Retarded position** due to finite propagation speed:
 
-This physical demonstrator complements the minimal hybrid update example by
-showing how the same asymmetric, non‑recurrent state chain emerges from a
-real mechanical configuration.
+r_ret = r(t - |r| / c)
 
-🔹 Proton–Electron Retarded Interaction Demonstrator
-This demonstrator extends the asymmetric, forward‑moving dynamics of the Juhász Model
-into the electromagnetic domain. It simulates a proton and an electron interacting
-under multiple classical forces while incorporating retarded electromagnetic interaction —
-meaning that neither particle responds to the other’s instantaneous position.
-Instead, each particle reacts to the other’s past position, shifted by the finite
-propagation speed of electromagnetic influence:
 
-r_ret = r(t - |r|/c)
+Neither particle reacts to the other’s instantaneous position.  
+Each reacts to where the other **was**, producing characteristic lag behavior.
 
-This delay produces the characteristic falling‑behind behavior:
-the faster electron does not accelerate toward the proton’s current location,
-but toward where the proton used to be. This velocity‑dependent asymmetry
-generates a forward‑moving, non‑recurrent state evolution and a spiral‑like approach
-rather than a simple collapse or closed orbit.
+The faster electron accelerates toward the proton’s *past* position, not its present one.  
+This velocity‑dependent asymmetry generates:
 
-The simulation includes:
+- forward‑moving, non‑recurrent evolution  
+- spiral‑like stabilization  
+- no collapse  
+- no closed orbit
 
-Coulomb force between proton and electron
+This demonstrates how hybrid, forward‑moving state chains naturally arise even in classical two‑body systems when finite propagation speed is included.
 
-Lorentz magnetic force from velocity × magnetic field
+---
 
-tiny gravitational attraction (included for completeness)
+## 🔹 4. Teleodynamic Steering Demonstrator
 
-retarded position calculation based on finite signal speed
+A second, independent module showing how teleodynamic principles apply to generative systems.
 
-asymmetric trajectory caused by velocity‑dependent delay
+A **packet‑level steering layer** is placed above a dummy generative model:
 
-spiral‑like stabilization instead of circular or collapsing motion
+1. **Packet‑State**  
+   Short‑range memory accumulating hidden activity over 8‑token windows.
 
-This demonstrator complements the mechanical model by showing how the Juhász Model’s
-asymmetric, non‑recurrent dynamics naturally emerge in a real physical system when
-finite propagation speed is taken into account. It illustrates how hybrid,
-forward‑moving state chains arise even in classical two‑body interactions once
-retardation is included.
+2. **Field‑State**  
+   A slowly evolving teleodynamic field influenced by packet‑state and a fixed instruction vector.  
+   Over time, the field becomes a **directional attractor**.
 
-🔹 Future Extensions
+3. **Logit‑Bias Feedback**  
+   The field feeds back into the logits using a tanh‑like bias.  
+   Even a small bias produces **measurable directional drift** in token selection.
+
+The demo runs for 40 steps and prints ASCII heatmaps of packet‑state and field‑state evolution.
+
+### Drift Measurement
+The system computes:
+
+- mean token ID per packet  
+- variance per packet  
+
+Random systems fluctuate.  
+Teleodynamic steering produces:
+
+- stable drift toward a preferred region  
+- decreasing variance  
+- structured field‑state evolution
+
+This is a minimal computational analogue of teleodynamic guidance in the Juhász Model 12.0.
+
+---
+
+## 🔹 Future Extensions
+
 Planned modules include:
 
-teleonomic field interaction
+- Teleonomic field interactions  
+- Teleodynamic control  
+- Attractor visualization  
+- Full hybrid simulation  
+- AGEINT‑compatible analysis tools
 
-teleodynamic guidance
+---
 
-attractor visualization
+## 🔹 Zenodo References (DOI)
 
-full hybrid simulation
+These demonstrations are based on the published Juhász Model papers:
 
-AGEINT‑compatible analysis tools
+- Juhász Model 1.0 — https://doi.org/10.5281/zenodo.20776920  
+- Juhász Model 3.0 — https://doi.org/10.5281/zenodo.20270739  
+- Juhász Model 4.1 — https://doi.org/10.5281/zenodo.20347018  
+- Juhász Model 8.0 — https://doi.org/10.5281/zenodo.20674998  
+- Juhász Model 9.0 — https://doi.org/10.5281/zenodo.20675094  
+- Juhász Model 10.0 — https://doi.org/10.5281/zenodo.20675287  
+- Juhász Model 11.0 — https://doi.org/10.5281/zenodo.20675388  
+- Juhász Model 12.0 — https://doi.org/10.5281/zenodo.20675497  
 
-🔹 References (Zenodo DOIs)
-This demonstrator is based on the published Juhász Model papers:
+---
 
-Juhász Model 1.0 — https://doi.org/10.5281/zenodo.20776920
+## 🔹 Version
 
-Juhász Model 3.0 — https://doi.org/10.5281/zenodo.20270739
-
-Juhász Model 4.1 — https://doi.org/10.5281/zenodo.20347018
-
-Juhász Model 8.0 — https://doi.org/10.5281/zenodo.20674998
-
-Juhász Model 9.0 — https://doi.org/10.5281/zenodo.20675094
-
-Juhász Model 10.0 — https://doi.org/10.5281/zenodo.20675287
-
-Juhász Model 11.0 — https://doi.org/10.5281/zenodo.20675388
-
-Juhász Model 12.0 — https://doi.org/10.5281/zenodo.20675497
-
-🔹 Version
-Initial public demonstrator — Juhász Model Demo
+First public multi‑module demonstrator — Juhász Model Demo
