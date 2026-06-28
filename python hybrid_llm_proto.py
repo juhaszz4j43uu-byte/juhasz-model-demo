@@ -1,5 +1,5 @@
 # hybrid_llm_proto.py
-import nump as np
+import numpy as np
 
 
 
