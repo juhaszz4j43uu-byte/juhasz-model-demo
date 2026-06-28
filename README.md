@@ -55,6 +55,22 @@ Planned modules include:
 
 ---
 
+## 🔹 Mechanical Demonstrator (physical model)
+
+The repository also includes a physical simulation of the Juhász Model 1.0
+mechanical core (`mechanical_demo.py`). This model implements the actual
+two‑disc system with:
+
+- R1 and R2 radii (1:2 gear ratio)
+- a ball moving radially on disc R1
+- collision at the center with disc R2
+- impulse transfer and asymmetric state evolution
+- forward‑moving spiral‑like attractor behavior
+
+This physical demonstrator complements the minimal hybrid update example by
+showing how the same asymmetric, non‑recurrent state chain emerges from a
+real mechanical configuration.
+
 ## 🔹 References (Zenodo DOIs)
 
 This demonstrator is based on the published Juhász Model papers:
