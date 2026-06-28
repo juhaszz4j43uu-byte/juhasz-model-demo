@@ -3,6 +3,10 @@ import numpy as np
 
 
 class TokenModel:
+
+
+
+class TokenModel:
     def __init__(self, vocab_size=100, hidden_dim=32):
         self.vocab_size = vocab_size
         self.hidden_dim = hidden_dim
